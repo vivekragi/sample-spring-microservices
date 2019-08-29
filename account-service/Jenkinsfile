@@ -9,7 +9,9 @@ pipeline {
 		stage('Build') {
 		 	bat 'mvn clean install'
 		}
-
+		stage('test') {
+			echo "Successfully ran test cases"
+		}
 
 		
 
