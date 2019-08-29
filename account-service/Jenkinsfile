@@ -7,10 +7,15 @@ pipeline {
 			}
 		}
 		stage('Build') {
-		 	bat 'mvn clean install'
+		steps {
+		 	 bat 'mvn clean install'
+		}
 		}
 		stage('test') {
-			echo "Successfully ran test cases"
+			steps {
+				echo "Successfully ran test cases"
+			}
+			
 		}
 
 		
