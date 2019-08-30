@@ -1,1 +1,2 @@
-C:\Program Files\apache-maven-3.6.1\bin\mvn clean install
+call mvn -f pom.xml
+call mvn clean install
