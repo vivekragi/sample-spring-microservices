@@ -8,9 +8,8 @@ pipeline {
 		}
 		stage('Build') {
 		steps {
-		 	 call maven clean
-		 	 bat label: '', script: 'call maven clean'
-
+		 	bat mvn deploy
+		 	bat label: '', script: 'mvn deploy'
 		}
 		}
 		stage('test') {
