@@ -7,18 +7,14 @@ pipeline {
 			}
 		}
 		stage('Build') {
-		steps {
-		 	bat label: '', script: 'mvn -B -DskipTests clean package'
-		}
+			steps {
+				bat label: '', script: 'mvn --version'
+			}
 		}
 		stage('test') {
 			steps {
 				echo "Successfully ran test cases"
 			}
-			
 		}
-
-		
-
 	}
 }
