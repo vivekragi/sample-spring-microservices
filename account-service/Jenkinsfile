@@ -8,8 +8,7 @@ pipeline {
 		}
 		stage('Build') {
 		steps {
-		 	bat label: '', script: '''call mvn -f pom.xml
-			call mvn clean install'''
+		 	bat label: '', script: 'mvn -B -DskipTests clean package'
 		}
 		}
 		stage('test') {
