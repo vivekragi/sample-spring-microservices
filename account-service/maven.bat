@@ -1,2 +1,1 @@
-call mvn -f pom.xml
-call mvn clean install
+mvn -B -DskipTests clean package
