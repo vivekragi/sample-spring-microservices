@@ -8,8 +8,14 @@ pipeline {
 		}
 		stage('Build') {
 		steps {
-		 	bat mvn deploy
-		 	bat label: '', script: 'mvn deploy'
+		 	bat time /t
+			call mvn install
+			if not "%ERRORLEVEL%" == "0" exit /b
+			time /t
+		 	bat label: '', script: '''time /t
+			call mvn install
+			if not "%ERRORLEVEL%" == "0" exit /b
+			time /t'''
 		}
 		}
 		stage('test') {
