@@ -8,7 +8,7 @@ pipeline {
 		}
 		stage('Build') {
 			steps {
-				bat label: '', script: 'maven.bat'
+				bat label: '', script: '''mvn clean install'''
 			}
 		}
 		stage('test') {
