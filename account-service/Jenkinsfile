@@ -8,8 +8,8 @@ pipeline {
 		}
 		stage('Build') {
 		steps {
-		 	 bat 'mvn clean install'
-		 	 bat label: '', script: 'mvn clean install'
+		 	 call maven clean
+		 	 bat label: '', script: 'call maven clean'
 
 		}
 		}
