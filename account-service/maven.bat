@@ -1,4 +1,1 @@
-time /t
-call mvn install
-if not "%ERRORLEVEL%" == "0" exit /b
-time /t
+C:\Program Files\apache-maven-3.6.1\bin\mvn clean install
